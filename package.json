@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build":"npx parcel build src/index.html",
+    "build": "react-scripts build",
     "clean": "rm -rf node_modules .git .env .DS_Store"
   },
   "eslintConfig": {
