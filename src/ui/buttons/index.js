@@ -1,14 +1,28 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-    background-color: ${props => props.bgcolor || "transparent"};;
     border: none;
-    border-radius: ${props => props.radius || "3px"};;
-    box-shadow: ${props => props.shadow || "0 0 3px 1px rgb(220, 220, 220)"};;
-    margin: ${props => props.marign || "2rem"};;
-    padding: ${props => props.padding || "0.25rem 2rem"};;
-    color: ${props => props.color|| "black"};;
-    font-size: ${props => props.size || "1rem"};
+    background-color: #758173;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
 `;
 
-export {Button}
+const Button2 = styled.button`
+    border: none;
+    background-color: #DCE5D3;
+    padding: 0.5rem;
+    color: #758173;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+`
+
+const IconButton = styled.button`
+    background-color: transparent;
+    border: none;
+`;
+
+export {Button, Button2, IconButton}
