@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build src/index.js",
     "clean": "rm -rf node_modules .git .env .DS_Store"
   },
   "eslintConfig": {
