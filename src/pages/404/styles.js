@@ -1,16 +1,31 @@
 import styled from 'styled-components';
+import pnfBg from './404-garden.jpg'
 
 const PNFStyles = styled.main`
-    background-color: #F5F7F8;
+    background-image: url(${pnfBg});
+    background-position: center;
     height: 100vh;
 `
-const Succulent = styled.div`
-    width: 300px;
-    margin: 0 auto;
-`
-const ALink = styled.p`
+const Banner = styled.div`
     text-align: center;
-    color: #F5F7F8;
-`
+    background-color: #1B1524;
+    opacity: 0.95;
+    padding: 3rem 0;
 
-export {PNFStyles, Succulent, ALink}
+    h1{
+        color: #F5F7F8;
+        margin-bottom: .5rem;
+        font-weight: 400;
+    }
+
+    a {
+    background-color: #9C1D21;
+    padding: .5rem 2rem;
+    border-radius: 3px;
+    color: #fff;
+    }
+
+`;  
+
+
+export {PNFStyles, Banner}

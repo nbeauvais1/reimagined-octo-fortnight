@@ -1,7 +1,10 @@
 import React from 'react'
 import {Link, useNavigate} from 'react-router-dom';
+import { signOut } from 'firebase/auth'
+import { auth } from '../../libs/firebase'
 
-import { BiHomeHeart, BiCategory } from "react-icons/bi";
+import { AiOutlinePlus, AiOutlineEdit } from "react-icons/ai";
+import { BiHomeHeart } from "react-icons/bi";
 import { CgComment } from "react-icons/cg";
 import { FaShippingFast, FaMoneyCheck } from "react-icons/fa";
 import { GoSettings } from "react-icons/go";
@@ -15,10 +18,8 @@ import {Button} from '../../ui/buttons';
 
 function SideBar (props){
 
-    let navigation = useNavigate();
-    function onHandleSubmit(e){
-        e.preventDefault();
-        navigation('/');
+    function onLogoutRequest(e){
+        signOut(auth)
     }
 
     return(
@@ -31,17 +32,18 @@ function SideBar (props){
                 </SideBarItem>
             </SideBarGroup>
             
+            {/* Products */}
             <SideBarGroup>
                 <SideBarItem>
-                    <FlexItem><RiPlantLine color="9C1D21" size="1.25rem"/>Products</FlexItem>
+                    <FlexItem><RiPlantLine color="9C1D21" size="1.25rem"/><Link to="/dashboard">View All Products</Link></FlexItem>
                     <MdKeyboardArrowRight color="C2C1C0" size="1.5rem"/>
                 </SideBarItem>
                 <SideBarItem>
-                    <FlexItem><BiCategory color="758173" size="1.25rem"/>Product Categories</FlexItem>
+                    <FlexItem><AiOutlinePlus color="758173" size="1.25rem"/><Link to="add">Add New Product</Link></FlexItem>
                     <MdKeyboardArrowRight color="C2C1C0" size="1.5rem"/>
                 </SideBarItem>
                 <SideBarItem>
-                    <FlexItem><IoPricetagOutline color="758173" size="1.25rem"/>Sale Items</FlexItem>
+                    <FlexItem><AiOutlineEdit color="758173" size="1.25rem"/><Link to="edit">Edit Product</Link></FlexItem>
                     <MdKeyboardArrowRight color="C2C1C0" size="1.5rem"/>
                 </SideBarItem>
                 <SideBarItem>
@@ -80,9 +82,7 @@ function SideBar (props){
                 </SideBarItem>
             </SideBarGroup>
             <SideBarItem>
-              <Form onSubmit={onHandleSubmit}>
-                <Button type="submit">Logout</Button>
-              </Form>  
+                <Button  onClick={onLogoutRequest} >Logout</Button>
             </SideBarItem>
         </SideBarStyles>
     )

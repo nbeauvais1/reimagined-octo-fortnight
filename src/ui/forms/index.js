@@ -7,9 +7,9 @@ const Form = styled.form`
 
 const Input = styled.input`
     border: none;
-    box-shadow: 2px 2px 6px #c2c1c0;
+    box-shadow: 1px 1px 4px #B0B7AA;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 2rem;
 `
 
