@@ -6,8 +6,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import {PanelStyles, Path, TopBar, PanelForms} from './styles'
 import {Heading1, Underline} from '../../typography/headings';
 import {Button2} from '../../ui/buttons';
-import { ProductPreview } from '../products/ProductPreview';
-
+import {AddProduct} from '../products/widgets/AddProduct'
 function AddProductPanel ({title, ...props}){
     
     return(
@@ -18,10 +17,7 @@ function AddProductPanel ({title, ...props}){
             </TopBar>    
             <Heading1 Weight="normal" Align="Left">{title || "Display Panel"}</Heading1>
             <Underline Color="#758173" Align="auto auto auto 0"/>
-            <PanelForms>
-                <Heading1 Weight="normal" Align="Left">Insert New Product</Heading1>
-                <ProductPreview></ProductPreview>
-            </PanelForms>
+            <AddProduct/>
         </PanelStyles>
     )
 }

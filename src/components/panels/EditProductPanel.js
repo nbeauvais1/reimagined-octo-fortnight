@@ -20,7 +20,7 @@ function EditProductPanel ({title, ...props}){
             <Underline Color="#758173" Align="auto auto auto 0"/>
             <PanelForms>
                 <Heading1 Weight="normal" Align="Left">Edit Product</Heading1>
-                <ProductPreview></ProductPreview>
+               
             </PanelForms>
         </PanelStyles>
     )

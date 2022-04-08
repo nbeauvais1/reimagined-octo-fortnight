@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const ProductPreviewStyles = styled.div`
-    max-width: 360px;
-    align-self: stretch;
-    padding: 3rem 2rem;
+
+
+const ProductCardStyles  = styled.div`
+      
 `
 
 const ProductImage = styled.div`
@@ -21,7 +21,6 @@ const ProductPrice = styled.p`
 const ProductDescription = styled.p`
   
 `;
-
 ;
 
-export {ProductPreviewStyles, ProductImage, ProductName, ProductPrice, ProductDescription}
+export {ProductCardStyles, ProductImage, ProductName, ProductPrice, ProductDescription}
