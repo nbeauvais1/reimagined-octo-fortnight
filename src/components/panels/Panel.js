@@ -6,7 +6,7 @@ import {MdDeleteOutline} from 'react-icons/md'
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 import {ProductCard} from '../products/ProductCard'
-import {PanelStyles, Path, TopBar, ProductCards} from './styles'
+import {PanelStyles, Path, TopBar, Products} from './styles'
 import {Heading1, Underline} from '../../typography/headings';
 import {Button2} from '../../ui/buttons';
 
@@ -32,9 +32,9 @@ useEffect(()=>{
             </TopBar>    
             <Heading1 Weight="normal" Align="Left">{title || "Display Panel"}</Heading1>
             <Underline Color="#758173" Align="auto auto auto 0"/>
-            
+            <Products>
             { productData? productData.map(product=><ProductCard key={product.uid} product={product}/>) :<p>There is no data</p>}
-
+            </Products>
         </PanelStyles>
     )
 }

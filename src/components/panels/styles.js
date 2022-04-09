@@ -28,14 +28,12 @@ top: 0%;
 z-index: 1;
 background-color: #fff;
 `
-const ProductCards = styled.div`
-  width: 100%;
+const Products = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
-  justify-content: space-evenly;
-  height: 100%;
-`;
+  justify-content: space-between;
+  gap: 1rem;
+`
 
 const PanelForms = styled.div`
   display: grid;
@@ -45,4 +43,4 @@ const PanelForms = styled.div`
   padding: 1.5rem 3rem;
 `;
 
-export {PanelStyles, Path, TopBar, ProductCards, PanelForms}
+export {PanelStyles, Path, TopBar, Products, PanelForms}

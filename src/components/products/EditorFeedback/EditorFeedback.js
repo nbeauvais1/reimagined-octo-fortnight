@@ -1,7 +1,7 @@
 import React from 'react';
 import {AiOutlineCloudUpload, AiOutlineCheckCircle} from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
-import {Button} from '../../../ui/buttons'
+import {Button3} from '../../../ui/buttons'
 import {EditorFeedbackStyles, FeedBackMessage, FeedBack, FeedBackOption} from './styles'
 
 function EditorFeedback ({children, status, writeCompleted, ...props})  {
@@ -13,14 +13,14 @@ function EditorFeedback ({children, status, writeCompleted, ...props})  {
             !status
             ?
             <FeedBack>
-             <AiOutlineCheckCircle color="d9599d" size="12rem"/>
+             <AiOutlineCheckCircle color="9C1D21" size="12rem"/>
              <FeedBackMessage>
                Product Uploaded Successfully
              </FeedBackMessage>
            </FeedBack>
            :
            <FeedBack>
-             <AiOutlineCloudUpload color="d9599d" size="12rem"/>
+             <AiOutlineCloudUpload color="9C1D21" size="12rem"/>
              <FeedBackMessage>
                 Uploading New Product
              </FeedBackMessage>
@@ -29,13 +29,13 @@ function EditorFeedback ({children, status, writeCompleted, ...props})  {
           } 
 
            <FeedBackOption>
-              <Button
+              <Button3
               onClick={ ()=>writeCompleted(false) }
               disabled={status}
-              >Add Another Product</Button>
-              <Button
+              >Add Another Product</Button3>
+              <Button3
               onClick={()=> navigator('/dashboard')}
-              >View All Products</Button>
+              >View All Products</Button3>
            </FeedBackOption>
         </EditorFeedbackStyles>
   )

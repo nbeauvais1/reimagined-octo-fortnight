@@ -5,7 +5,7 @@ import { useAddNewProduct } from '../../../../hooks/useAddNewProduct';
 import {AddProductStyles} from './styles'
 import {ProductEditor} from "../../ProductEditor"
 import {EditorFeedback} from "../../EditorFeedback"
-import ProductPreview from '../../ProductPreview/preview.png'
+import ProductPreview from './preview.jpg'
 
   const defaults={
     description:`Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.`,

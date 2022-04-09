@@ -20,9 +20,17 @@ const Button2 = styled.button`
     gap: .25rem;
 `
 
+const Button3 = styled.button`
+    border: none;
+    background-color: #758173;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 5px;
+`;
+
 const IconButton = styled.button`
     background-color: transparent;
     border: none;
 `;
 
-export {Button, Button2, IconButton}
+export {Button, Button2, Button3, IconButton}
